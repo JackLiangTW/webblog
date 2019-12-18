@@ -8,11 +8,11 @@ layout: post
 
 # 1.設定好_config.yml中網域
 * baseurl:Repository名稱
-* url:自己Github主頁網址
+* url:自己Github主頁網址(看該theme是否要設置)
 
 ```js
 baseurl: "/blog" 
-url: "https://github.com/JackLiangTW"
+url: "https://XXX.github.io"
 ```
 # 2.在Github上建立新的Repository並push上去
 * 建議不要勾選Initialize this repository with a README

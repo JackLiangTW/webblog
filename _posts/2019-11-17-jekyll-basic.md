@@ -41,7 +41,7 @@ layout: post(使用_layout -> post.html來render這筆資料)
 * 這是jekyll中很重要的文件，會在這裡設定許多東西，也可以自己新增參數來存取。
 * title:首頁的標題 SEO關鍵字會找尋
 * description: 詳細網站解釋 SEO關鍵字會找尋
-* url:架站的網域(ex:github架站 https://github.com/myID)
+* url:架站的網域(ex:github架站 https://github.com/myID)(看theme是否要設置，有些不用設置)
 * baseurl: /blog (ex:github 自己架站的repository名字) 在local serve開啟也要加上
 
 ```html
