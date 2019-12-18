@@ -1,0 +1,87 @@
+I"�<h2>在Github使用Jekyll&amp;SEO(2)  Jekyll基本架構</h2>
+
+<h1 id="1_includes資料夾">1._includes資料夾</h1>
+<ul>
+  <li>是存放重複使用元素(Dom/html)的地方，通常是header/footer之類的</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">%</span> <span class="nx">include</span> <span class="nx">header</span><span class="p">.</span><span class="nx">html</span> <span class="o">%</span><span class="p">(</span><span class="err">整段放在</span><span class="p">{}</span><span class="err">裡</span><span class="o">/</span><span class="err">在</span><span class="nx">html</span><span class="err">使用這樣載入</span><span class="nx">header</span><span class="p">.</span><span class="nx">html</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h1 id="2_layout資料夾">2._layout資料夾</h1>
+<ul>
+  <li>是用來存放頁面版型的地方，ex:post.html(_post的每筆資料都是套用post.html)</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: default(把這行拿掉可以取消原本theme套用的一些版型)
+---
+<span class="nt">&lt;p&gt;</span>Hi<span class="nt">&lt;p&gt;</span>
+</code></pre></div></div>
+
+<h1 id="3_post資料夾">3._post資料夾</h1>
+<ul>
+  <li>是放blog檔案的地方，md/html檔案都可，是很好新增文章的系統</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+title: Jekyll-環境安裝
+author: JackLiang
+layout: post(使用_layout -&gt; post.html來render這筆資料)
+---
+<span class="nt">&lt;h2&gt;</span>我是POST<span class="nt">&lt;/h2&gt;</span>
+</code></pre></div></div>
+
+<h1 id="4_site資料夾">4._site資料夾</h1>
+<ul>
+  <li>是jekyll serve執行時繪製的整個網站，修改這裡面內容是沒有作用的(重新serve時 還是照其他資料夾的內容繪製)</li>
+</ul>
+
+<h1 id="5_configyml">5._config.yml</h1>
+<ul>
+  <li>這是jekyll中很重要的文件，會在這裡設定許多東西，也可以自己新增參數來存取。</li>
+  <li>title:首頁的標題 SEO關鍵字會找尋</li>
+  <li>description: 詳細網站解釋 SEO關鍵字會找尋</li>
+  <li>url:架站的網域(ex:github架站 https://github.com/myID)</li>
+  <li>baseurl: /blog (ex:github 自己架站的repository名字) 在local serve開啟也要加上</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>title: My blog
+subtitle: Web/Unity/AR
+description: 
+  網頁、Unity、Spark AR技術紀錄
+author: Jack Liang
+email: test0@gmail.com
+avatar: assets/images/avatar.jpg
+url: "http://example.com"
+baseurl: "/blog"
+</code></pre></div></div>
+
+<h1 id="6gemfile">6.Gemfile</h1>
+<ul>
+  <li>用來存放用到的bundle/套件 可以在這裡調整套件版本</li>
+</ul>
+
+<h1 id="7一些code應用範例下面都等於">7.一些code應用範例–&gt;下面()都等於{}</h1>
+<ul>
+  <li>載入圖片  site.baseurl=這網站跟目錄</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"(( site.baseurl ))/public/img/h01.png"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span> 
+</code></pre></div></div>
+
+<ul>
+  <li>使用if判斷render</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>(% if page.author %)(( page.author ))<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Markdown超連結(blank) –&gt;下面的()不變
+<br /><em><a href="https://rubyinstaller.org/downloads/" target="_blank">Ruby</a></em></li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*[Ruby](https://rubyinstaller.org/downloads/){:target="_blank"}* 
+</code></pre></div></div>
+:ET
