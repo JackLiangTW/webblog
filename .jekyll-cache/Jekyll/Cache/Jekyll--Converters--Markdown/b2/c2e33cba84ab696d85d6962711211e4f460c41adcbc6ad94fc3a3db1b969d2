@@ -1,4 +1,4 @@
-I"C<h2>在Github使用Jekyll&amp;SEO(3)  Jekyll套用主題</h2>
+I"F<h2>在Github使用Jekyll&amp;SEO(3)  Jekyll套用主題</h2>
 
 <h1 id="1theme主題">1.<em><a href="https://jekyllthemes.io/free" target="_blank">theme主題</a></em></h1>
 <ul>
@@ -48,6 +48,6 @@ Could not find gem 'bundler (~&gt; 2.02)' in any of the relevant sources:
 <h1 id="修改theme內的資料內容">修改theme內的資料內容</h1>
 <ul>
   <li>theme大概的架構都在這篇 
-<em><a href="/blog/2019/12/17/jekyll-basic">Jekyll基本結構</a></em></li>
+<em><a href="/webblog/2019/12/17/jekyll-basic">Jekyll基本結構</a></em></li>
 </ul>
 :ET
