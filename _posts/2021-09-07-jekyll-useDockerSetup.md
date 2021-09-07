@@ -8,7 +8,6 @@ layout: post
 
 # 1.安裝Docker
 * *[安裝教學](https://docs.docker.com/get-docker/){:target="_blank"}*
-* url:自己Github主頁網址(看該theme是否要設置)
 
 # 2.選擇jekyll theme使用
 * *[theme主題](https://jekyllthemes.io/free){:target="_blank"}*
@@ -30,9 +29,8 @@ docker run --volume="$PWD:/srv/jekyll" -p 4000:4000 -it jekyll/jekyll:4.0.0 jeky
 * -p (對應port號)
 * jekyll serve (jekyll架設專案指令)
 
-# 其他幾本Docker 指令
+# 其他基本Docker 指令
 * docker ps (列出Docker container列表)
-
 * docker kill [CONTAINER ID] (停止並刪除container,CONTAINER ID : 從docker ps取得)
 
 # 參考資料:
