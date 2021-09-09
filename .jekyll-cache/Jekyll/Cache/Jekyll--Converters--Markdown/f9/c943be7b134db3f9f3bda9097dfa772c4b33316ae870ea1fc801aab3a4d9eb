@@ -1,10 +1,8 @@
-I"�
-<h2>Local端使用Docker架設Jekyll theme專案</h2>
+I"�<h2>Local端使用Docker架設Jekyll theme專案</h2>
 
 <h1 id="1安裝docker">1.安裝Docker</h1>
 <ul>
   <li><em><a href="https://docs.docker.com/get-docker/" target="_blank">安裝教學</a></em></li>
-  <li>url:自己Github主頁網址(看該theme是否要設置)</li>
 </ul>
 
 <h1 id="2選擇jekyll-theme使用">2.選擇jekyll theme使用</h1>
@@ -20,24 +18,25 @@
   <li>建議使用 jekyll/jekyll:4.0</li>
 </ul>
 
-<h1 id="4docker指令架設jekyll專案">4.Docker指令架設Jekyll專案</h1>
+<h1 id="4在gemfile或gemspec檔案修改jekyll-bundle-version">4.在Gemfile或.gemspec檔案修改jekyll, bundle version</h1>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">spec</span><span class="p">.</span><span class="nx">add_development_dependency</span> <span class="dl">"</span><span class="s2">jekyll</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">~&gt; 4.0.0</span><span class="dl">"</span>
+<span class="nx">spec</span><span class="p">.</span><span class="nx">add_development_dependency</span> <span class="dl">"</span><span class="s2">bundler</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">~&gt; 2.1.4</span><span class="dl">"</span>
+</code></pre></div></div>
+
+<h1 id="5docker指令架設jekyll專案">5.Docker指令架設Jekyll專案</h1>
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">docker</span> <span class="nx">run</span> <span class="o">--</span><span class="nx">volume</span><span class="o">=</span><span class="dl">"</span><span class="s2">$PWD:/srv/jekyll</span><span class="dl">"</span> <span class="o">-</span><span class="nx">p</span> <span class="mi">4000</span><span class="p">:</span><span class="mi">4000</span> <span class="o">-</span><span class="nx">it</span> <span class="nx">jekyll</span><span class="o">/</span><span class="nx">jekyll</span><span class="p">:</span><span class="mf">4.0</span><span class="p">.</span><span class="mi">0</span> <span class="nx">jekyll</span> <span class="nx">serve</span>
 </code></pre></div></div>
 <ul>
-  <li>–volume (本地端啟動資料位置 : container端虛擬機專案位置)</li>
+  <li>–volume (本地端啟動資料位置 : container端虛擬機專案  位置)</li>
   <li>$PWD (cmd現在路徑位置)</li>
   <li>-p (對應port號)</li>
   <li>jekyll serve (jekyll架設專案指令)</li>
 </ul>
 
-<h1 id="其他幾本docker-指令">其他幾本Docker 指令</h1>
+<h1 id="其他基本docker-指令">其他基本Docker 指令</h1>
 <ul>
-  <li>
-    <p>docker ps (列出Docker container列表)</p>
-  </li>
-  <li>
-    <p>docker kill [CONTAINER ID] (停止並刪除container,CONTAINER ID : 從docker ps取得)</p>
-  </li>
+  <li>docker ps (列出Docker container列表)</li>
+  <li>docker kill [CONTAINER ID] (停止並刪除container,CONTAINER ID : 從docker ps取得)</li>
 </ul>
 
 <h1 id="參考資料">參考資料:</h1>

@@ -1,0 +1,22 @@
+
+
+h1.profoH1{
+    margin-top: 50px;
+    font-weight: bold;
+    text-align: left;
+    border-bottom: 2px solid #000;
+}
+.row .item img {
+    height: 320px;
+}
+
+@media (max-width: 1600px) {
+    .row .item img {
+        height: 270px;
+    }
+}
+@media (max-width: 722px) {
+    .row .item img {
+        height: auto;
+    }
+}

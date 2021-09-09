@@ -20,7 +20,13 @@ cd jekyll-theme-prologue
 * *[Docker Jekyll](https://hub.docker.com/r/jekyll/jekyll/tags){:target="_blank"}*
 * 建議使用 jekyll/jekyll:4.0
 
-# 4.Docker指令架設Jekyll專案
+# 4.在Gemfile或.gemspec檔案修改jekyll, bundle version
+```js
+spec.add_development_dependency "jekyll", "~> 4.0.0"
+spec.add_development_dependency "bundler", "~> 2.1.4"
+```
+
+# 5.Docker指令架設Jekyll專案
 ```js
 docker run --volume="$PWD:/srv/jekyll" -p 4000:4000 -it jekyll/jekyll:4.0.0 jekyll serve
 ```
