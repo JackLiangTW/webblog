@@ -1,0 +1,59 @@
+I"S	<h2>在Github使用Jekyll&amp;SEO(3)  Jekyll套用主題</h2>
+
+<h1 id="1theme主題">1.<em><a href="https://jekyllthemes.io/free" target="_blank">theme主題</a></em></h1>
+<ul>
+  <li>有很多好用漂亮的主題，用Github clone下來或是下載zip檔案</li>
+</ul>
+
+<h1 id="2cmd安裝版型套件">2.cmd安裝版型套件</h1>
+<ul>
+  <li>安裝該主題用到的套件</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install bundler
+</code></pre></div></div>
+<h1 id="套件版本錯誤修改-jekyll版本不同">套件版本錯誤修改-jekyll版本不同</h1>
+<ul>
+  <li>先用jekyll -v找到自己版本，再到到Gemfile或是.gemspec修改jekyll版本</li>
+</ul>
+
+<h1 id="套件版本錯誤修改-bundle版本不同">套件版本錯誤修改-bundle版本不同</h1>
+<ul>
+  <li>如果出現類似的錯誤 可以到Gemfile或是.gemspec修改套件版本</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Bundler could not find compatible versions for gem "bundler":
+  In Gemfile:
+    bundler (~&gt; 2.02) x64-mingw32
+
+  Current Bundler version:
+    bundler (2.1.1)
+This Gemfile requires a different version of Bundler.
+Perhaps you need to update Bundler by running `gem install bundler`?
+
+Could not find gem 'bundler (~&gt; 2.02)' in any of the relevant sources:
+  the local ruby installation
+</code></pre></div></div>
+<ul>
+  <li>Gemfile修改版本完成再次安裝</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">bundle</span> <span class="nx">install</span>
+</code></pre></div></div>
+
+<h1 id="3執行">3.執行</h1>
+<ul>
+  <li>第一次啟動
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">bundle</span> <span class="nx">exec</span> <span class="nx">jekyll</span>
+</code></pre></div>    </div>
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">jekyll</span> <span class="nx">serve</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h1 id="修改theme內的資料內容">修改theme內的資料內容</h1>
+<ul>
+  <li>theme大概的架構都在這篇 
+<em><a href="/webblog/2019/12/17/jekyll-basic">Jekyll基本結構</a></em></li>
+</ul>
+:ET

@@ -1,5 +1,5 @@
 ---
-title: 使用Docker架設Jekyll theme
+title: Docker架設Jekyll
 author: JackLiang
 layout: post
 ---

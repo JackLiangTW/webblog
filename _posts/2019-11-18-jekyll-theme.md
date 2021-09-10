@@ -41,6 +41,10 @@ bundle install
 ```
 
 # 3.執行
+* 第一次啟動
+```js
+bundle exec jekyll
+```
 ```js
 jekyll serve
 ```
