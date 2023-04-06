@@ -30,4 +30,5 @@ bundle exec jekyll
 * 之後都用
 ```js
 jekyll serve
+jekyll serve --host localhost
 ```

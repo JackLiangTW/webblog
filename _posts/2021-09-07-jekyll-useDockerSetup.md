@@ -28,7 +28,11 @@ spec.add_development_dependency "bundler", "~> 2.1.4"
 
 # 5.Docker指令架設Jekyll專案
 ```js
-docker run --volume="$PWD:/srv/jekyll" -p 4000:4000 -it jekyll/jekyll:4.0.0 jekyll serve
+docker run --volume="${PWD}:/srv/jekyll" -p 4000:4000 -it jekyll/jekyll:4.0.0 jekyll serve
+```
+# 5-2.Docker指令架設Jekyll專案 - localhost
+```js
+docker run --volume="${PWD}:/srv/jekyll" -p 4000:4000 -it jekyll/jekyll:4.0.0 jekyll serve --host localhost
 ```
 * --volume (本地端啟動資料位置 : container端虛擬機專案  位置)
 * $PWD (cmd現在路徑位置)
