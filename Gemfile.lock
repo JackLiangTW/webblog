@@ -258,7 +258,9 @@ PLATFORMS
   x64-mingw-ucrt
 
 DEPENDENCIES
+  bundler (~> 2.4.10)
   github-pages
+  jekyll (~> 3.9.3)
   jekyll-theme-prologue!
   webrick
 
