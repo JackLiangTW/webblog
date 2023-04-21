@@ -5,10 +5,12 @@ source "https://rubygems.org"
 # gem 'webrick'
 # gem 'kramdown-parser-gfm'
 
-gem 'jekyll-theme-prologue', '~> 0.3.3'
+# gem 'jekyll-theme-prologue', '~> 0.3.3'
 # gemspec
-gem 'kramdown-parser-gfm'
+# gem 'kramdown-parser-gfm'
 
-gem 'jekyll', '~> 3.9.3'
+# gem 'jekyll', '~> 3.9.3'
 # gem 'github-pages', group: :jekyll_plugins
 # gem install jekyll -v 3.9.3
+
+gem 'github-pages'
