@@ -14,3 +14,4 @@ source "https://rubygems.org"
 # gem install jekyll -v 3.9.3
 
 gem 'github-pages'
+gem 'jekyll-theme-prologue', '~> 0.3.3'
